@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="#009688">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgLibro"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/libro" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTitulo"
+        android:textSize="35dp"
+        android:textColor="#ffffff"
+        android:text="El Gran Gatsby"
+        android:layout_toEndOf="@+id/imgLibro"
+        android:layout_alignTop="@+id/imgLibro"
+        android:layout_marginStart="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAutor"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:text="F. Scott Fitzgerald."
+        android:layout_toEndOf="@+id/imgLibro"
+        android:layout_below="@+id/txtTitulo"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>

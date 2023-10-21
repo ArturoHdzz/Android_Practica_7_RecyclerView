@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         Lista_libros.add(new Libro("El señor de los anillos", "J.R.R. Tolkien"));
         Lista_libros.add(new Libro("El hobbit", "J.R.R. Tolkien"));
         Lista_libros.add(new Libro("El silmarillion", "J.R.R. Tolkien"));
+        Lista_libros.add(new Libro("El retrato de Dorian Gray", "Oscar Wilde"));
+        Lista_libros.add(new Libro("El fantasma de Canterville", "Oscar Wilde"));
+        Lista_libros.add(new Libro("El retrato de Dorian Gray", "Oscar Wilde"));
+        Lista_libros.add(new Libro("El fantasma de Canterville", "Oscar Wilde"));
+        Lista_libros.add(new Libro("El retrato de Dorian Gray", "Oscar Wilde"));
 
         LibroAdapter la = new LibroAdapter(Lista_libros);
         RecyclerView rc = findViewById(R.id.rcLibros);

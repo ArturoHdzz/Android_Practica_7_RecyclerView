@@ -68,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void verificar() {
-        int permiso = ContextCompat.checkSelfPermission(this, android.Manifest.permission.INTERNET);
-        int Permiso2 = ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int permiso = ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET);
+        int Permiso2 = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if(permiso == PackageManager.PERMISSION_GRANTED && Permiso2 == PackageManager.PERMISSION_GRANTED){
             Toast.makeText(this, "Tienes permiso", Toast.LENGTH_SHORT).show();
         }else{
-            requestPermissions(new String[]{android.Manifest.permission.INTERNET, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+            requestPermissions(new String[]{Manifest.permission.INTERNET, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
             Intent i = new Intent(this, MainActivity4.class);
             startActivity(i);
         }

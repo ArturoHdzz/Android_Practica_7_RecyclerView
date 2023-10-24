@@ -32,8 +32,8 @@ public class MainActivity4 extends AppCompatActivity {
     }
 
     private void verificar() {
-        int permiso = ContextCompat.checkSelfPermission(this, android.Manifest.permission.INTERNET);
-        int Permiso2 = ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int permiso = ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET);
+        int Permiso2 = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (permiso == PackageManager.PERMISSION_GRANTED && Permiso2 == PackageManager.PERMISSION_GRANTED) {
             Intent i = new Intent(this, MainActivity.class);
             startActivity(i);

@@ -1,13 +1,16 @@
 package com.example.practica_7_r.model;
 
-public class Libro {
+import java.io.Serializable;
+public class Libro implements Serializable{
 
     private String titulo;
     private String autor;
+    private String descripcion;
 
-    public Libro(String titulo, String autor) {
+    public Libro(String titulo, String autor, String descripcion) {
         this.titulo = titulo;
         this.autor = autor;
+        this.descripcion = descripcion;
     }
 
     public String getTitulo() {
@@ -24,5 +27,13 @@ public class Libro {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }

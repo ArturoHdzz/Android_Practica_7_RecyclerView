@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.practica_7_r.R;
@@ -16,9 +17,15 @@ import java.util.List;
 public class LibroAdapter extends RecyclerView.Adapter<LibroAdapter.LibroViewHolder> {
 
     List<Libro> Lista_libros;
+    final OnItemClickListener listener;
 
-    public LibroAdapter(List<Libro> lista_libros) {
+    public interface OnItemClickListener {
+        void onItemClick(Libro item);
+    }
+
+    public LibroAdapter(List<Libro> lista_libros, OnItemClickListener listener) {
         Lista_libros = lista_libros;
+        this.listener = listener;
     }
     @NonNull
     @Override
@@ -55,6 +62,12 @@ public class LibroAdapter extends RecyclerView.Adapter<LibroAdapter.LibroViewHol
             li = l;
             txtTitulo.setText(l.getTitulo());
             txtAutor.setText(l.getAutor());
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(li);
+                }
+            });
         }
     }
 }

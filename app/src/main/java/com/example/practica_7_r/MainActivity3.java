@@ -12,6 +12,8 @@ public class MainActivity3 extends AppCompatActivity {
         TextView textView2;
         TextView textView3;
 
+        TextView textView5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,9 +22,11 @@ public class MainActivity3 extends AppCompatActivity {
         Libro libro = (Libro) getIntent().getSerializableExtra("libro");
         textView2 = findViewById(R.id.textView2);
         textView3 = findViewById(R.id.textView3);
+        textView5 = findViewById(R.id.textView5);
 
         textView3.setText(libro.getTitulo());
         textView2.setText(libro.getDescripcion());
+        textView5.setText(libro.getAutor());
 
     }
 }

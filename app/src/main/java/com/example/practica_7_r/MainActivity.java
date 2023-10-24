@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Tienes permiso", Toast.LENGTH_SHORT).show();
         }else{
             requestPermissions(new String[]{android.Manifest.permission.INTERNET, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+            Intent i = new Intent(this, MainActivity4.class);
+            startActivity(i);
         }
     }
 }
